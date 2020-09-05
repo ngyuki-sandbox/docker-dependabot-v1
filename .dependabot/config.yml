@@ -3,6 +3,10 @@ update_configs:
   - package_manager: docker
     directory: /
     update_schedule: daily
+    allowed_updates:
+      - match:
+          dependency_type: all
+          update_type: "semver:patch"
     automerged_updates:
       - match:
           dependency_type: all
