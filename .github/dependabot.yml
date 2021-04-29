@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "07:00"
+    timezone: Asia/Tokyo
+  open-pull-requests-limit: 10
+  allow:
+  - dependency-type: all
+  ignore:
+  - dependency-name: php
+    versions:
+    - 8.0.2.pre.alpine
